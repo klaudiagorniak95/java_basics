@@ -20,7 +20,13 @@ public class Main {
 
         List<User> foundUsers = userService.findUsersByLogin("lo");
         if (foundUsers != null) {
-            System.out.print("Znaleziono uzytkownikow: " + foundUsers.size());
+            System.out.println("Znaleziono uzytkownikow: " + foundUsers.size());
         }
+
+        Engine engine = new Engine("electric");
+        Car electric_car = new Car("opel", "yellow", engine);
+        Car combustion_car = new Car("dacia", "black", new Engine("combustion"));
+        System.out.println(electric_car.engine.typeEngine);
+        System.out.println(combustion_car.engine.typeEngine);
     }
 }

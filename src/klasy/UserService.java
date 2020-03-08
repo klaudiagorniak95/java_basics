@@ -37,8 +37,8 @@ public class UserService {
 
     public List<User> findUsersByLogin(String login){
         List<User> usersList = new LinkedList<>();
-        for (User u  : users) {
-            boolean containsLogin = u.login.startsWith(login);
+        for (User u  : this.users) {
+            boolean containsLogin = u.login.contains(login);
             if (containsLogin) {
                 usersList.add(u);
             }
