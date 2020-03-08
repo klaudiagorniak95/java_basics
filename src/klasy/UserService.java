@@ -1,7 +1,5 @@
 package klasy;
 
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -37,7 +35,7 @@ public class UserService {
 
     public List<User> findUsersByLogin(String login){
         List<User> usersList = new LinkedList<>();
-        for (User u  : this.users) {
+        for (User u : this.users) {
             boolean containsLogin = u.login.contains(login);
             if (containsLogin) {
                 usersList.add(u);
